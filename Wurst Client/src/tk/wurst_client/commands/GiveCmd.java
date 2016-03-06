@@ -1,5 +1,5 @@
 /*
- * Copyright © 2014 - 2016 | Wurst-Imperium | All rights reserved.
+ * Copyright Â© 2014 - 2016 | Wurst-Imperium | All rights reserved.
  * 
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -39,7 +39,7 @@ public class GiveCmd extends Cmd
 	private ItemTemplate[] templates =
 		new ItemTemplate[]{
 			new ItemTemplate("Knockback Stick", Items.stick,
-				"{ench:[{id:19, lvl:12}], display:{Name:§6Knockback Stick},"
+				"{ench:[{id:19, lvl:12}], display:{Name:Â§6Knockback Stick},"
 					+ "HideFlags:63}"),
 			
 			new ItemTemplate("One Hit Sword", Items.diamond_sword,
@@ -47,13 +47,13 @@ public class GiveCmd extends Cmd
 					+ "{AttributeName:generic.attackDamage,"
 					+ "Name:generic.attackDamage, Amount:2147483647,"
 					+ "Operation:0, UUIDMost:246216, UUIDLeast:24636}"
-					+ "], display:{Name:§6One Hitter}, Unbreakable:1,"
+					+ "], display:{Name:Â§6One Hitter}, Unbreakable:1,"
 					+ "HideFlags:63}"),
 			
 			new ItemTemplate("Super Bow", Items.bow, "{ench:["
-				+ "{id:48, lvl:32767}, {id:49, lvl:5}, {id:50, lvl:1},"
+				+ "{id:48, lvl:32767}, {id:49, lvl:5}, {id:50, lvl:1},{Unbreakable:1},"
 				+ "{id:51, lvl:1}"
-				+ "], display:{Name:§6Super Bow}, HideFlags:63}"),
+				+ "], display:{Name:Â§6Super Bow}, HideFlags:63}"),
 			
 			new ItemTemplate(
 				"Super Thorns Chestplate",
@@ -64,7 +64,7 @@ public class GiveCmd extends Cmd
 					+ "], AttributeModifiers:["
 					+ "{AttributeName:generic.maxHealth, Name:generic.maxHealth,"
 					+ "Amount:200, Operation:0, UUIDMost:43631, UUIDLeast:2641}"
-					+ "], display:{Name:§6Super Thorns Chestplate}, HideFlags:63,"
+					+ "], display:{Name:Â§6Super Thorns Chestplate}, HideFlags:63,"
 					+ "Unbreakable:1}"),
 			
 			new ItemTemplate("Super Potion", Items.potionitem,
@@ -76,12 +76,12 @@ public class GiveCmd extends Cmd
 					+ "{Id:8, Amplifier:3, Duration:2147483647},"
 					+ "{Id:1, Amplifier:5, Duration:2147483647},"
 					+ "{Id:5, Amplifier:127, Duration:2147483647}],"
-					+ "display:{Name:§6Super Potion}, HideFlags:63}"),
+					+ "display:{Name:Â§6Super Potion}, HideFlags:63}"),
 			
 			new ItemTemplate("Griefer Potion", Items.potionitem,
 				"{CustomPotionEffects:["
 					+ "{Id:3, Amplifier:127, Duration:2147483647}"
-					+ "], display:{Name:§6Griefer Potion}, HideFlags:63}")};
+					+ "], display:{Name:Â§6Griefer Potion}, HideFlags:63}")};
 	
 	private int parseAmount(Item item, String input) throws Error
 	{
@@ -107,11 +107,11 @@ public class GiveCmd extends Cmd
 		// list all templates
 		if(args[0].equalsIgnoreCase("templates"))
 		{
-			wurst.chat.message("§cItem templates:");
+			wurst.chat.message("Â§cItem templates:");
 			for(int i = 0; i < templates.length; i++)
 			{
 				ItemTemplate template = templates[i];
-				wurst.chat.message("§c" + (i + 1) + "§c: §6" + template.name);
+				wurst.chat.message("Â§c" + (i + 1) + "Â§c: Â§6" + template.name);
 			}
 			return;
 		}
